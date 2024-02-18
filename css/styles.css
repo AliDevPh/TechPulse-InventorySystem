@@ -97,17 +97,17 @@
     cursor: pointer;
     transition-duration: 0.4s;
 }
-.login-button:hover{
+.signup-button:hover{
     background-color: #3e8e41;
 
 }
-.signup-button:hover{
+.login-button:hover{
     background-color: #008afb;
 }
-.login-button{
+.signup-button{
     background-color: #5CB85C;
 }
-.signup-button{
+.login-button{
     background-color: #0275D8;
 }
 .bottom{
