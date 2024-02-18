@@ -12,6 +12,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     }
 
+    $sql_checkusername = "SELECT * FROM logintable WHERE Username = ?";
+    $stmt_checkusername = mysqli_prepare($connection, $sql_checkusername);
+    mysqli_stmt_bind_param($stmt_checkusername, "s", $username);
+    mysqli_stmt_execute($stmt_checkusername);
+    $result_checkusername = mysqli_stmt_get_result($stmt_checkusername);
+
+    
+    if (mysqli_num_rows($result_checkusername) > 0)  {
+        header("Location: ../register.html?error=username_taken");
+        exit();
+    }
+
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
     $sql = "INSERT INTO logintable (Username, Password, Email) VALUES (?, ?, ?)";
