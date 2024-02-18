@@ -1,1 +1,1 @@
-# TechPulse-InventorySystem
+# techpulse.io
