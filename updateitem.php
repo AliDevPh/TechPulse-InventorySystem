@@ -47,7 +47,7 @@
   die("Product ID is not provided.");
 }
     ?>
-        <div class="top-title">Update Item: value="<?php echo $row['ProdName']?>"</div>
+        <div class="top-title">Update Item: <?php echo $row['ProdName']?></div>
         <div class="form">
           <form action="php/save.php" method = "post">
             <div class="container">
